@@ -44,4 +44,51 @@ class LinkedList:
 
   def reverse_list(self):
     # TO BE COMPLETED
-    pass
+    
+    # I need a current value to for the node to tell where it is 
+    current = self
+    print(f'current {current}')
+    # I need to set a new value so it can go to the node next of it
+    new_value = current.get_next()
+    set_new = set_next()
+    # I should set the current.next node to None to initialize it
+    # current.set_next() = None
+    set_new = None
+    # I should start a while loop with new != None
+    while new_value != None:
+        # I need a new var to act as a temp value so I can shuffle the items
+      previous = current
+        # I should set the current value to the new value so I can itterate through the list
+      current = new_value
+        # I should set the new value to the current.next value to increase it
+      new_value = current.get_next()
+        # I should set the current.next value to the prev value
+      current.set_next = previous
+    # I should return current
+    return current
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+current = self.head
+new = current.get_next()
+  # current.set_next() = None
+  while new != None:
+      prev = current
+      current = new
+      new = current.next_node
+      current.next = prev
+  # print(current)
+  return current
+
+'''
