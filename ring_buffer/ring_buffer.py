@@ -15,6 +15,7 @@ class RingBuffer:
         pass
         
     def get(self):
+      # I need to return all the items in storage
         if self.storage:
           node = self.storage
           return node.storage
