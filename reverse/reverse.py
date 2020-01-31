@@ -44,4 +44,159 @@ class LinkedList:
 
   def reverse_list(self):
     # TO BE COMPLETED
-    pass
+    # node where finder currently is
+    current = self.head
+    previous = None
+   
+
+    while current != None:
+      # print('TEST')
+      temporary = current
+      # print('temp', temporary)
+      current = current.set_next(previous)
+      # print('current', current)
+      # current.get_next() = temporary
+      previous = current
+      new_node = temporary
+      # print('temporary', temporary)
+
+'''
+We did this in class
+this is where we are going to have to juggle a few variables like in last weeks project
+
+Im going to need to hold the current node
+im going to need to hold the previous node
+Im going to need to hold the next node
+
+it will all be in a while loop
+while the current node is not none
+  I think Ill probably need a temperary var to hold for juggling
+  ill set temp node to current node
+  ill set current node to next node
+  ill set next node to the node after current
+  the node after current can be set to the temp
+
+
+
+'''
+
+'''
+Passing 3 tests, 2 errors
+
+# node where finder currently is
+    current = self.head
+    print('current', current)
+    # node after current node
+    # new_node = current.get_next
+    # new_node = self.get_next
+    new_node = None
+    # node previous to current node
+    previous = None
+
+    while current != None:
+      print('TEST')
+      temporary = current
+      print('temp', temporary)
+      current = new_node
+      print('current', current)
+      new_node = current.get_next
+      print('new node', new_node)
+      current.get_next = temporary
+      print('temporary', temporary)
+'''
+
+'''
+# node where finder currently is
+    current = self.head
+    # print('current', current)
+    # node after current node
+    # new_node = current.get_next
+    # new_node = self.get_next
+    new_node = current.next_node
+    # node previous to current node
+    previous = None
+
+    while current != None:
+      # print('TEST')
+      temporary = current
+      # print('temp', temporary)
+      current = new_node
+      # print('current', current)
+      new_node = current.set_next()
+      # print('new node', new_node)
+      current.get_next = temporary
+      # print('temporary', temporary)
+'''
+
+'''
+Still passing 3 tests, failing differe 2
+
+# node where finder currently is
+    current = self.head
+   
+    # node after current node
+    new_node = current.next_node
+    current.next_node = None
+
+    while new_node != None:
+      # print('TEST')
+      temporary = current
+      # print('temp', temporary)
+      current = new_node
+      # print('current', current)
+      new_node = current.set_next()
+      # print('new node', new_node)
+      # current.get_next() = temporary
+      current = temporary
+      # print('temporary', temporary)
+'''
+
+'''
+I think Im juggling correctly but there is still returning errors for reversing a single number and an actual list of numbers
+
+I think I have to many variables the new node and previous are interacting wrong
+
+# node where finder currently is
+    current = self.head
+    previous = None
+   
+    # node after current node
+    # new_node = current.next_node
+    # current.next_node = None
+
+    while current != None:
+      # print('TEST')
+      temporary = current
+      # print('temp', temporary)
+      current = previous
+      # print('current', current)
+      new_node = current.set_next(previous)
+      # print('new node', new_node)
+      # current.get_next() = temporary
+      previous = new_node
+      new_node = temporary
+      # print('temporary', temporary)
+'''
+
+'''
+Passing 4 tests
+for some reason have new_node = temporary (forgot to take it out) passes but when i have current = temporary it fails
+
+# node where finder currently is
+    current = self.head
+    previous = None
+   
+
+    while current != None:
+      # print('TEST')
+      temporary = current
+      # print('temp', temporary)
+      current = current.set_next(previous)
+      # print('current', current)
+      # current.get_next() = temporary
+      previous = current
+      new_node = temporary
+      # print('temporary', temporary)
+'''
+
+
