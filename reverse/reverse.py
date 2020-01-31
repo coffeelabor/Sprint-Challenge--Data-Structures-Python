@@ -46,19 +46,25 @@ class LinkedList:
     # TO BE COMPLETED
     # node where finder currently is
     current = self.head
+    # Just initializing the variable
     previous = None
    
 
     while current != None:
       # print('TEST')
-      temporary = current
-      # print('temp', temporary)
-      current = current.set_next(previous)
-      # print('current', current)
-      # current.get_next() = temporary
+      # Temporary is being set to the next node
+      temporary = current.next_node
+      # Set the finder to previous node, reversing it
+      current.set_next(previous)
+      # previous is getting incremented by 1 kinda, this way the tail is the new head
       previous = current
-      new_node = temporary
-      # print('temporary', temporary)
+      # current was at previous location, but it leapfrogs to the temperory location
+      current = temporary
+      
+    
+    # the old tail is the new head
+    self.head = previous
+    return self.head
 
 '''
 We did this in class
@@ -200,3 +206,29 @@ for some reason have new_node = temporary (forgot to take it out) passes but whe
 '''
 
 
+'''
+Passing
+# node where finder currently is
+    current = self.head
+    previous = None
+   
+
+    while current != None:
+      # print('TEST')
+      # Temporary is being set to the next node
+      temporary = current.next_node
+      # print('temp', temporary)
+      # Set the finder to previous node, reversing it
+      current.set_next(previous)
+      # print('current', current)
+      # current.get_next() = temporary
+      # previous is getting incremented by 1 kinda, this way the tail is the new head
+      previous = current
+      # current was at previous location, but it leapfrogs to the temperory location
+      current = temporary
+      # print('temporary', temporary)
+    
+    # the old tail is the new head
+    self.head = previous
+    return self.head
+'''
