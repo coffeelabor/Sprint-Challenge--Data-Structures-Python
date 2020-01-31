@@ -8,4 +8,9 @@ class RingBuffer:
     pass
 
   def get(self):
-    pass
+    # Note:  This is the only [] allowed
+        list_buffer_contents = []
+
+        # TODO: Your code here
+
+        return list_buffer_contents
