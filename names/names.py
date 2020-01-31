@@ -13,7 +13,7 @@ f.close()
 
 duplicates = []
 
-binary_search = BinarySearchTree(None)
+binary_search = BinarySearchTree('test')
 
 # Insert names into list
 for name in names_1:
